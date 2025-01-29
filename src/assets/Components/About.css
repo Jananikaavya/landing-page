@@ -1,0 +1,126 @@
+.About {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Space between the image and text */
+    padding: 20px; /* Optional padding around the about section */
+}
+
+/* Left section with image */
+.about-left {
+    flex-basis: 40%; /* Default: 40% width for larger screens */
+    position: relative;
+}
+
+/* Right section with text */
+.about-right {
+    flex-basis: 60%; /* Default: 60% width for larger screens */
+    padding: 10px;
+}
+
+.about-img {
+    width: 100%; /* Makes the image responsive */
+    border-radius: 40px;
+    height: auto;
+}
+
+.play-icon {
+    width: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the icon within the image */
+}
+
+/* Text Styling */
+.about-right h3 {
+    font-weight: 600;
+    font-size: 16px;
+    color: #212EA0;
+}
+
+.about-right h2 {
+    font-size: 35px;
+    color: #000F38;
+    margin: 10px 0;
+    max-width: 400px;
+}
+
+.about-right p {
+    color: #676767;
+    margin: 0 0 10px; /* Adds space between paragraphs */
+    line-height: 1.5;
+}
+
+/* Responsive Styling */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+    .About {
+        gap: 15px;
+    }
+
+    .about-left {
+        flex-basis: 45%; /* Adjust image width slightly */
+    }
+
+    .about-right {
+        flex-basis: 55%; /* Adjust text width for better balance */
+    }
+
+    .about-right h2 {
+        font-size: 30px; /* Adjust heading size */
+    }
+
+    .play-icon {
+        width: 50px; /* Reduce play icon size */
+    }
+}
+
+/* Small Screens (Mobile Devices) */
+@media (max-width: 768px) {
+    .About {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Keep left alignment */
+    }
+
+    .about-left {
+        flex-basis: 100%; /* Full width for image */
+        margin-bottom: 20px; /* Add spacing between image and text */
+    }
+
+    .about-right {
+        flex-basis: 100%; /* Full width for text */
+    }
+
+    .about-right h2 {
+        font-size: 28px; /* Smaller heading for mobile */
+    }
+
+    .about-right p {
+        font-size: 14px; /* Smaller paragraph text */
+    }
+
+    .play-icon {
+        width: 40px; /* Smaller play icon */
+    }
+}
+
+/* Very Small Screens (e.g., phones) */
+@media (max-width: 480px) {
+    .About {
+        padding: 10px; /* Reduce padding for compact screens */
+    }
+
+    .about-right h2 {
+        font-size: 24px; /* Adjust heading for smaller screens */
+    }
+
+    .about-right p {
+        font-size: 13px; /* Adjust paragraph font size */
+    }
+
+    .play-icon {
+        width: 35px; /* Even smaller play icon */
+    }
+}

@@ -1,0 +1,118 @@
+/* Base Hero Section Styles */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: radial-gradient(rgba(8, 0, 60, 0.7), rgba(8, 0, 58, 0.7)), url('./hero.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-text {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hero-text h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+.hero-text p {
+    max-width: 700px;
+    margin: 20px auto;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #e0e0e0;
+}
+
+.hero-text .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #534f66; /* Blue background */
+    border: none;
+    border-radius: 50px; /* Rounded button */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.hero-text .btn img {
+    margin-left: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+.hero-text .btn:hover {
+    background: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Responsive Styles */
+
+/* Large Tablets (Max-width: 1200px) */
+@media (max-width: 1200px) {
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-text .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+/* Small Tablets (Max-width: 768px) */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .hero-text .btn {
+        padding: 8px 18px;
+        font-size: 15px;
+    }
+}
+
+/* Mobile Phones (Max-width: 480px) */
+@media (max-width: 480px) {
+    .hero {
+        padding: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+        margin: 15px auto;
+    }
+
+    .hero-text .btn {
+        padding: 6px 16px;
+        font-size: 14px;
+    }
+}

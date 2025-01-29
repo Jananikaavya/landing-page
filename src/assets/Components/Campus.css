@@ -1,0 +1,95 @@
+.campus {
+  margin: 40px;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+  justify-content: center;
+  gap: 20px; /* Adds space between images */
+}
+
+.gallery img {
+  width: 22%; /* Reduce width for better fit */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Styling */
+.btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px auto; /* Center the button */
+  display: block; /* Makes the button take up its own row */
+}
+
+.dark-btn {
+  background-color: #444;
+}
+
+.dark-btn:hover {
+  background-color: #555;
+}
+
+.dark-btn img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* Responsive Styles */
+
+/* Medium Screens (Tablets and smaller laptops) */
+@media (max-width: 1024px) {
+  .gallery img {
+    width: 30%; /* Increase image width for better fit */
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Small Screens (Mobile devices) */
+@media (max-width: 768px) {
+  .gallery img {
+    width: 45%; /* Two images per row */
+  }
+
+  .btn {
+     /* Full-width button for small screens */
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Extra Small Screens (Phones) */
+@media (max-width: 480px) {
+  .gallery img {
+    width: 100%; /* Full-width images for tiny screens */
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .dark-btn img {
+    width: 16px;
+    height: 16px;
+  }
+}

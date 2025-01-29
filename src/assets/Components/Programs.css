@@ -1,0 +1,110 @@
+/* Container for all programs */
+.programs {
+    margin: 80px auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: space-between;
+    gap: 20px; /* Consistent spacing between items */
+}
+
+/* Individual program card */
+.program {
+    flex: 1 1 calc(33.33% - 20px); /* Default: 3 items per row with gap */
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden; /* Prevents content overflow */
+    border-radius: 10px; /* Rounded corners for program cards */
+    background: #f4f4f4; /* Light background color for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Add smooth scaling on hover */
+}
+
+.program:hover {
+    transform: scale(1.03); /* Slight zoom effect on hover */
+}
+
+/* Program images */
+.program img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0; /* Rounded top corners only */
+    display: block;
+}
+
+/* Caption styling */
+.caption {
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners only */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 15, 152, 0.6); /* Semi-transparent overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.4s ease-in-out;
+}
+
+.caption img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.caption p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.program:hover .caption {
+    opacity: 1;
+}
+
+/* Responsive styling */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+    .program {
+        flex: 1 1 calc(48% - 20px); /* Two items per row */
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .program {
+        flex: 1 1 100%; /* Single item per row */
+    }
+
+    .caption img {
+        width: 50px; /* Smaller icon size */
+    }
+
+    .caption p {
+        font-size: 16px; /* Adjust font size */
+    }
+}
+
+/* Very small devices (e.g., smartphones) */
+@media (max-width: 480px) {
+    .program {
+        margin-bottom: 15px;
+    }
+
+    .caption {
+        padding: 10px; /* Adjust padding for compact screens */
+    }
+
+    .caption img {
+        width: 40px; /* Further reduce icon size */
+    }
+
+    .caption p {
+        font-size: 14px; /* Smaller text for compact screens */
+    }
+}
